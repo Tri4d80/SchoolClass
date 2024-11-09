@@ -14,18 +14,18 @@ class Program
 
         if (class9A.ClassMoney > class9B.ClassMoney)
         {
-            Console.WriteLine($"{class9A.getClassName()} " +
-                              $"osztály többet fizet mint {class9B.getClassName()} osztály " +
+            Console.WriteLine($"{class9A.GetClassName()} " +
+                              $"osztály többet fizet mint {class9B.GetClassName()} osztály " +
                               $"{class9A.ClassMoney - class9B.ClassMoney} Ft-tal" );
         } else if (class9A.ClassMoney < class9B.ClassMoney)
         {
-            Console.WriteLine($"{class9B.getClassName()} " +
-                              $"osztály többet fizet mint {class9A.getClassName()} osztály " +
+            Console.WriteLine($"{class9B.GetClassName()} " +
+                              $"osztály többet fizet mint {class9A.GetClassName()} osztály " +
                               $"{class9B.ClassMoney - class9A.ClassMoney} Ft-tal" );
         }
         else
         {
-            Console.WriteLine($"{class9A.getClassName()} osztály ugyanannyit fizet mint {class9B.ClassMoney}");
+            Console.WriteLine($"{class9A.GetClassName()} osztály ugyanannyit fizet mint {class9B.ClassMoney}");
         }
     }
 }
