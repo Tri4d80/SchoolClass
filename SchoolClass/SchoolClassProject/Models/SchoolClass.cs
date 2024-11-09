@@ -5,7 +5,7 @@ namespace SchoolClassProject.Models;
 public class SchoolClass
 {
     private static int _idCounter = 0;
-    private int _id;
+    private readonly int _id;
     private int _schoolYear;
     private char _classLetter;
     private int _classMoney;
@@ -39,7 +39,7 @@ public class SchoolClass
 
     public override string ToString()
     {
-        return $"Osztály: (ID: {_id}){_schoolYear}.{_classLetter}, osztálypénze: {_classMoney} Ft";
+        return $"Osztály: (ID: {_id}) {_schoolYear}.{_classLetter}, osztálypénze: {_classMoney} Ft";
     }
 
     public string GetClassName()
