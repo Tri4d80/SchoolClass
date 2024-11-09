@@ -9,18 +9,23 @@ public class SchoolClass
     public SchoolClass()
     {
         _classMoney = -1;
-        _classLetter = 'X';
+        _classLetter = 'x';
         _schoolYear = 0;
     }
 
     public SchoolClass(int schoolYear, char classLetter, int classMoney)
     {
         _classMoney = classMoney;
-        _classLetter = classLetter;
+        _classLetter = char.ToLower(classLetter);
         _schoolYear = schoolYear;
     }
     
     public int SchoolYear { get => _schoolYear; set => _schoolYear = value; }
-    public char ClassLetter { get => _classLetter; set => _classLetter = value; }
+    public char ClassLetter { get => _classLetter; set => _classLetter = char.ToLower(value); }
     public int ClassMoney { get => _classMoney; set => _classMoney = value; }
+
+    public override string ToString()
+    {
+        return $"Osztály: {_schoolYear}.{_classLetter}, osztálypénz: {_classMoney} Ft";
+    }
 }
