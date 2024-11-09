@@ -4,7 +4,7 @@ namespace SchoolClassProject.Interfaces;
 
 public interface ISchoolClassRepo
 {
-    List<SchoolClassWithPublicData> GetSchoolClassPerYear(int schoolClassYear);
+    List<SchoolClassWithPublicData> GetSchoolClassesPerYear(int schoolClassYear);
     SchoolClassWithPublicData GetSchoolClass(int schoolClassYear, char schoolClassId);
     
     void Add(SchoolClass schoolClass);
