@@ -1,3 +1,5 @@
+using System.Diagnostics.Metrics;
+
 namespace SchoolClassProject.Models;
 
 public class SchoolClass
@@ -10,10 +12,10 @@ public class SchoolClass
 
     public SchoolClass()
     {
-        _id = _idCounter++;
         _classMoney = -1;
         _classLetter = 'x';
         _schoolYear = 0;
+        _id = Counter();
     }
 
     public SchoolClass(int schoolYear, char classLetter, int classMoney)
@@ -21,6 +23,12 @@ public class SchoolClass
         _classMoney = classMoney;
         _classLetter = char.ToLower(classLetter);
         _schoolYear = schoolYear;
+        _id = Counter();
+    }
+
+    private int Counter()
+    {
+        return _idCounter++;
     }
     
     
@@ -31,7 +39,7 @@ public class SchoolClass
 
     public override string ToString()
     {
-        return $"Osztály: {_schoolYear}.{_classLetter}, osztálypénze: {_classMoney} Ft";
+        return $"Osztály: (ID: {_id}){_schoolYear}.{_classLetter}, osztálypénze: {_classMoney} Ft";
     }
 
     public string GetClassName()
