@@ -26,6 +26,11 @@ public class SchoolClass
 
     public override string ToString()
     {
-        return $"Osztály: {_schoolYear}.{_classLetter}, osztálypénz: {_classMoney} Ft";
+        return $"Osztály: {_schoolYear}.{_classLetter}, osztálypénze: {_classMoney} Ft";
+    }
+
+    public string getClassName()
+    {
+        return $"{SchoolYear}.{ClassLetter}";
     }
 }
