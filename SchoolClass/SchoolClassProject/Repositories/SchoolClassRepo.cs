@@ -9,4 +9,5 @@ public class SchoolClassRepo
     public void AddSchoolClass(SchoolClass schoolClass) {}
     public void RemoveSchoolClass(SchoolClass schoolClass) {}
     public void RemoveSchoolClassById(int id) {}
+    public void Update(int schoolYear, char schoolClassId, int schoolClassMoney) {}
 }
